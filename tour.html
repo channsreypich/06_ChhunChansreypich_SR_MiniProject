@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jadoo - Tour Package</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Volkhov:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/output.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</head>
+
+<body class="bg-white text-[#1E1D4C] font-['Poppins']">
+  <header class="mx-auto max-w-7xl px-6 lg:px-10">
+    <nav class="flex h-24 items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-1">
+        <img src="./assets/Logo.png" alt="">
+      </a>
+
+      <div class="hidden items-center gap-14 text-base font-medium text-[#212832] lg:flex">
+        <a class="hover:text-black" href="./destination.html">Destinations</a>
+        <a class="hover:text-black" href="./hotel.html">Hotels</a>
+        <a class="hover:text-black" href="./tour.html">Flights</a>
+        <a class="hover:text-black" href="./index.html">Bookings</a>
+      </div>
+
+      <div class="hidden items-center gap-10 lg:flex">
+        <a class="text-base font-medium text-[#212832] hover:text-black" href="#">Login</a>
+        <a class="rounded-lg border border-[#212832] px-6 py-2 text-base font-medium text-[#212832] hover:bg-slate-50" href="#">
+          Sign up
+        </a>
+        <button class="flex items-center gap-2 text-base font-medium text-[#212832] hover:text-black">
+          EN
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.5 7.5 10 12l4.5-4.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold">
+        Menu
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden pb-6 lg:hidden">
+      <div class="grid gap-2 rounded-2xl border border-slate-200 p-3">
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-slate-50" href="./destination.html">Destinations</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-slate-50" href="./hotel.html">Hotels</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-slate-50" href="#">Flights</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-slate-50" href="#">Bookings</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative">
+    <div
+      class="h-[520px] w-full bg-cover bg-center"
+      style="background-image:url('./assets/dest1.jpg');"
+    >
+      <div class="absolute inset-0 bg-black/35"></div>
+
+      <div class="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 lg:px-10 text-center">
+        <h1 class="font-['Volkhov'] text-5xl font-bold text-white sm:text-6xl lg:text-7xl">
+          Enjoy in the best way!
+        </h1>
+        <p class="mt-4 text-lg font-semibold text-white/90">
+          Enjoy our services for your trip anytime
+        </p>
+
+        <div class="mt-12 w-full max-w-6xl">
+          <div class="flex justify-start">
+            <div class="inline-flex overflow-hidden rounded-t-2xl bg-white/20 backdrop-blur">
+              <button id="tabPublic"
+                class="flex items-center gap-2 bg-white px-6 py-4 text-sm font-semibold text-[#F1A501]">
+                <span class="grid h-6 w-6 place-items-center rounded-full bg-[#F1A501]/15">
+                  <i class="fa-solid fa-earth-europe"></i>
+                </span>
+                Public Tours
+              </button>
+              <button id="tabPrivate"
+                class="flex items-center gap-2 px-6 py-4 text-sm font-semibold text-white/90 hover:text-white">
+                <span class="grid h-6 w-6 place-items-center rounded-full bg-white/20">
+                  <i class="fa-solid fa-users-line"></i>
+                </span>
+                Private Tours
+              </button>
+            </div>
+          </div>
+
+          <div class="grid items-center gap-0 overflow-hidden rounded-2xl bg-white shadow-[0_40px_80px_rgba(0,0,0,0.25)] lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_96px]">
+            <div class="flex gap-4 border-b border-slate-100 px-6 py-6 lg:border-b-0 lg:border-r">
+              <div class="text-slate-600">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-[#212832]">Number of people</p>
+                <div class="mt-1 flex items-center justify-between text-sm text-[#5E6282]">
+                  <span>Choose number</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 border-b border-slate-100 px-6 py-6 lg:border-b-0 lg:border-r">
+              <div class="text-slate-600"><i class="fa-solid fa-calendar-days"></i></div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-[#212832]">Date</p>
+                <div class="mt-1 flex items-center justify-between text-sm text-[#5E6282]">
+                  <span>Choose Date</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 border-b border-slate-100 px-6 py-6 lg:border-b-0 lg:border-r">
+              <div class="text-slate-600">
+                <i class="fa-regular fa-clock text-[#F1A501]"></i>
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-[#212832]">Time</p>
+                <div class="mt-1 flex items-center justify-between text-sm text-[#5E6282]">
+                  <span>Choose Time</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 border-b border-slate-100 px-6 py-6 lg:border-b-0 lg:border-r">
+              <div class="text-slate-600"><i class="fa-solid fa-flag"></i></div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-[#212832]">Tour</p>
+                <div class="mt-1 flex items-center justify-between text-sm text-[#5E6282]">
+                  <span>Select Tour</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 px-6 py-6 lg:border-r">
+              <div class="text-slate-600"><i class="fa-solid fa-car-side"></i></div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-[#212832]">Transportation</p>
+                <div class="mt-1 flex items-center justify-between text-sm text-[#5E6282]">
+                  <span>Select Transportation</span>
+                  <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <button class="grid h-full place-items-center bg-[#FF8A00] text-white hover:brightness-95">
+              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white/20 text-2xl">⌕</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 lg:px-10 py-14">
+    <h2 class="text-xl font-semibold text-[#212832]">Tour Packages</h2>
+
+    <div class="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour1.png" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Lucca Bike Tour</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>EVERY DAY</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 3-10 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            A tour of the city and its surroundings led by a professional ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour2.png" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Wine tasting In Tuscany</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>MONDAY</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 10-30 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            The real magic is here where you can enjoy the best Tuscan wine and eat ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour3.jpg" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Cinque Terre Tour</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>TO BE DECIDED</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 10-50 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            Visiting the 5 Terre is a must, and can never go there enough ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour4.png" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Tour of the Lucca Hills</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>AT YOUR CHOICE</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 5-12 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            Visit with us the beautiful hills of Lucca, with a guide who will make ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour5.png" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Gardaland, Verona</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>TO BE DECIDED</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 10-50 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            Visit the largest and most fun park in Italy suitable for all ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-3xl bg-white">
+        <div class="overflow-hidden rounded-3xl">
+          <img class="h-64 w-full object-cover" src="./assets/tour6.png" alt="">
+        </div>
+        <div class="mt-5">
+          <h3 class="text-lg font-semibold text-[#212832]">Pisa & Lucca</h3>
+          <p class="mt-2 text-sm text-[#5E6282]">from <span class="font-semibold text-[#FF8A00]">34 €</span></p>
+
+          <div class="mt-3 flex items-center justify-between text-xs text-[#FF8A00]">
+            <span class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i>TO BE DECIDED</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-user-group"></i> 10-50 PP</span>
+          </div>
+
+          <p class="mt-4 text-sm leading-6 text-[#5E6282]">
+            Visiting the 5 Terre is a must, and can never go there enough ...
+          </p>
+
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF8A00]" href="#">
+            Read More <span>→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bg-[#FAD9B2]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+      <h2 class="text-center text-xl font-semibold text-[#212832]">Book Now Bike</h2>
+
+      <div class="mt-10 grid items-center gap-10 rounded-3xl bg-[#F7D3A9] p-8 lg:grid-cols-2 lg:p-12">
+        <form class="rounded-2xl bg-white/35 p-6 backdrop-blur sm:p-8">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Name and Surname</label>
+              <input class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]"
+                     type="text" placeholder="Enter your name and surname">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Email Address</label>
+              <input class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]"
+                     type="email" placeholder="Enter your email address">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Telephone Number</label>
+              <input class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]"
+                     type="text" placeholder="Enter your telephone number">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Service Type</label>
+              <select class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]">
+                <option>Select the service types</option>
+                <option>Bike Tour</option>
+                <option>City Tour</option>
+                <option>Wine Tour</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Date</label>
+              <input class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]"
+                     type="date">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-[#212832]">Time</label>
+              <input class="mt-2 w-full rounded-lg border border-white/60 bg-white/70 px-4 py-3 text-sm outline-none focus:border-[#FF8A00]"
+                     type="time">
+            </div>
+          </div>
+
+          <div class="mt-6 flex justify-center">
+            <button type="button"
+              class="rounded-full bg-[#FF8A00] px-10 py-3 text-sm font-semibold text-white shadow hover:brightness-95">
+              Book Now
+            </button>
+          </div>
+        </form>
+
+        <div class="flex justify-center">
+          <img class="w-full max-w-md object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.15)]"
+               src="./assets/tour7.png" alt="Bike">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+      <div class="grid gap-12 lg:grid-cols-5">
+        <div>
+          <p class="text-5xl font-semibold text-[#181E4B]">Jadoo.</p>
+          <p class="mt-6 max-w-[220px] text-sm text-[#5E6282]">
+            Book your trip in minute, get full Control for much longer.
+          </p>
+        </div>
+
+        <div class="lg:col-span-3 grid grid-cols-2 gap-10 sm:grid-cols-3">
+          <div>
+            <p class="text-xl font-bold text-[#080809]">Company</p>
+            <ul class="mt-6 space-y-3 text-lg text-[#5E6282]">
+              <li><a class="hover:text-[#212832]" href="#">About</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Careers</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Mobile</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-xl font-bold text-[#080809]">Contact</p>
+            <ul class="mt-6 space-y-3 text-lg text-[#5E6282]">
+              <li><a class="hover:text-[#212832]" href="#">Help/FAQ</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Press</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Affilates</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-xl font-bold text-[#080809]">More</p>
+            <ul class="mt-6 space-y-3 text-lg text-[#5E6282]">
+              <li><a class="hover:text-[#212832]" href="#">Airlinefees</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Airline</a></li>
+              <li><a class="hover:text-[#212832]" href="#">Low fare tips</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-4">
+            <a class="grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_15px_35px_rgba(0,0,0,0.08)]" href="#">f</a>
+            <a class="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400 text-white shadow-[0_15px_35px_rgba(0,0,0,0.08)]" href="#">◎</a>
+            <a class="grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_15px_35px_rgba(0,0,0,0.08)]" href="#">in</a>
+          </div>
+
+          <p class="mt-8 text-xl font-medium text-[#5E6282]">Discover our app</p>
+
+          <div class="mt-5 flex items-center gap-3">
+            <div class="rounded-xl bg-black px-4 py-2 text-white text-xs font-semibold">
+              GET IT ON<br><span class="text-sm font-bold">Google Play</span>
+            </div>
+            <div class="rounded-xl bg-black px-4 py-2 text-white text-xs font-semibold">
+              Download on the<br><span class="text-sm font-bold">App Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-16 text-center text-sm text-[#5E6282]">All rights reserved@jadoo.co</p>
+    </div>
+  </footer>
+</body>
+</html>

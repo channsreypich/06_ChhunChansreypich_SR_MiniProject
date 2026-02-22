@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --background-image-decor: url('../assets/Decore.png');
+}
